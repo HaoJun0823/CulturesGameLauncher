@@ -32,17 +32,19 @@
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControl_Main = new System.Windows.Forms.TabControl();
             this.TabPage_Game = new System.Windows.Forms.TabPage();
-            this.TabPage_Video = new System.Windows.Forms.TabPage();
-            this.TabPage_Maps = new System.Windows.Forms.TabPage();
             this.TableLayoutPanel_Game = new System.Windows.Forms.TableLayoutPanel();
+            this.TabPage_Video = new System.Windows.Forms.TabPage();
             this.TableLayoutPanel_Video = new System.Windows.Forms.TableLayoutPanel();
-            this.Label_Video_Width = new System.Windows.Forms.Label();
-            this.ComboBox_Video_Width = new System.Windows.Forms.ComboBox();
+            this.ComboBox_Video_Depth = new System.Windows.Forms.ComboBox();
+            this.Label_Video_Depth = new System.Windows.Forms.Label();
             this.Label_Video_Height = new System.Windows.Forms.Label();
             this.ComboBox_Video_Height = new System.Windows.Forms.ComboBox();
-            this.Label_Video_Depth = new System.Windows.Forms.Label();
-            this.ComboBox_Video_Depth = new System.Windows.Forms.ComboBox();
+            this.Label_Video_Width = new System.Windows.Forms.Label();
+            this.ComboBox_Video_Width = new System.Windows.Forms.ComboBox();
             this.RadioButton_Video_FullScreen = new System.Windows.Forms.RadioButton();
+            this.TabPage_Maps = new System.Windows.Forms.TabPage();
+            this.RadioButton_Video_Windowed = new System.Windows.Forms.RadioButton();
+            this.Label_Video_Mode = new System.Windows.Forms.Label();
             this.MenuStrip_Main.SuspendLayout();
             this.TabControl_Main.SuspendLayout();
             this.TabPage_Game.SuspendLayout();
@@ -89,26 +91,6 @@
             this.TabPage_Game.Text = "Game";
             this.TabPage_Game.UseVisualStyleBackColor = true;
             // 
-            // TabPage_Video
-            // 
-            this.TabPage_Video.Controls.Add(this.TableLayoutPanel_Video);
-            this.TabPage_Video.Location = new System.Drawing.Point(4, 22);
-            this.TabPage_Video.Name = "TabPage_Video";
-            this.TabPage_Video.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage_Video.Size = new System.Drawing.Size(616, 230);
-            this.TabPage_Video.TabIndex = 1;
-            this.TabPage_Video.Text = "Video";
-            this.TabPage_Video.UseVisualStyleBackColor = true;
-            // 
-            // TabPage_Maps
-            // 
-            this.TabPage_Maps.Location = new System.Drawing.Point(4, 22);
-            this.TabPage_Maps.Name = "TabPage_Maps";
-            this.TabPage_Maps.Size = new System.Drawing.Size(616, 230);
-            this.TabPage_Maps.TabIndex = 2;
-            this.TabPage_Maps.Text = "Maps";
-            this.TabPage_Maps.UseVisualStyleBackColor = true;
-            // 
             // TableLayoutPanel_Game
             // 
             this.TableLayoutPanel_Game.ColumnCount = 2;
@@ -122,6 +104,17 @@
             this.TableLayoutPanel_Game.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanel_Game.Size = new System.Drawing.Size(610, 224);
             this.TableLayoutPanel_Game.TabIndex = 0;
+            // 
+            // TabPage_Video
+            // 
+            this.TabPage_Video.Controls.Add(this.TableLayoutPanel_Video);
+            this.TabPage_Video.Location = new System.Drawing.Point(4, 22);
+            this.TabPage_Video.Name = "TabPage_Video";
+            this.TabPage_Video.Padding = new System.Windows.Forms.Padding(3);
+            this.TabPage_Video.Size = new System.Drawing.Size(616, 230);
+            this.TabPage_Video.TabIndex = 1;
+            this.TabPage_Video.Text = "Video";
+            this.TabPage_Video.UseVisualStyleBackColor = true;
             // 
             // TableLayoutPanel_Video
             // 
@@ -143,6 +136,8 @@
             this.TableLayoutPanel_Video.Controls.Add(this.Label_Video_Width, 1, 1);
             this.TableLayoutPanel_Video.Controls.Add(this.ComboBox_Video_Width, 2, 1);
             this.TableLayoutPanel_Video.Controls.Add(this.RadioButton_Video_FullScreen, 2, 3);
+            this.TableLayoutPanel_Video.Controls.Add(this.RadioButton_Video_Windowed, 5, 3);
+            this.TableLayoutPanel_Video.Controls.Add(this.Label_Video_Mode, 1, 3);
             this.TableLayoutPanel_Video.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TableLayoutPanel_Video.Location = new System.Drawing.Point(3, 3);
             this.TableLayoutPanel_Video.Name = "TableLayoutPanel_Video";
@@ -160,26 +155,26 @@
             this.TableLayoutPanel_Video.Size = new System.Drawing.Size(610, 224);
             this.TableLayoutPanel_Video.TabIndex = 0;
             // 
-            // Label_Video_Width
+            // ComboBox_Video_Depth
             // 
-            this.Label_Video_Width.AutoSize = true;
-            this.Label_Video_Width.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Label_Video_Width.Location = new System.Drawing.Point(64, 22);
-            this.Label_Video_Width.Name = "Label_Video_Width";
-            this.Label_Video_Width.Size = new System.Drawing.Size(55, 22);
-            this.Label_Video_Width.TabIndex = 0;
-            this.Label_Video_Width.Text = "Width：";
-            this.Label_Video_Width.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ComboBox_Video_Depth.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComboBox_Video_Depth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox_Video_Depth.FormattingEnabled = true;
+            this.ComboBox_Video_Depth.Location = new System.Drawing.Point(491, 25);
+            this.ComboBox_Video_Depth.Name = "ComboBox_Video_Depth";
+            this.ComboBox_Video_Depth.Size = new System.Drawing.Size(55, 20);
+            this.ComboBox_Video_Depth.TabIndex = 7;
             // 
-            // ComboBox_Video_Width
+            // Label_Video_Depth
             // 
-            this.TableLayoutPanel_Video.SetColumnSpan(this.ComboBox_Video_Width, 2);
-            this.ComboBox_Video_Width.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ComboBox_Video_Width.FormattingEnabled = true;
-            this.ComboBox_Video_Width.Location = new System.Drawing.Point(125, 25);
-            this.ComboBox_Video_Width.Name = "ComboBox_Video_Width";
-            this.ComboBox_Video_Width.Size = new System.Drawing.Size(116, 20);
-            this.ComboBox_Video_Width.TabIndex = 1;
+            this.Label_Video_Depth.AutoSize = true;
+            this.Label_Video_Depth.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Label_Video_Depth.Location = new System.Drawing.Point(430, 22);
+            this.Label_Video_Depth.Name = "Label_Video_Depth";
+            this.Label_Video_Depth.Size = new System.Drawing.Size(55, 22);
+            this.Label_Video_Depth.TabIndex = 6;
+            this.Label_Video_Depth.Text = "Depth：";
+            this.Label_Video_Depth.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Label_Video_Height
             // 
@@ -202,26 +197,26 @@
             this.ComboBox_Video_Height.Size = new System.Drawing.Size(116, 20);
             this.ComboBox_Video_Height.TabIndex = 5;
             // 
-            // Label_Video_Depth
+            // Label_Video_Width
             // 
-            this.Label_Video_Depth.AutoSize = true;
-            this.Label_Video_Depth.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Label_Video_Depth.Location = new System.Drawing.Point(430, 22);
-            this.Label_Video_Depth.Name = "Label_Video_Depth";
-            this.Label_Video_Depth.Size = new System.Drawing.Size(55, 22);
-            this.Label_Video_Depth.TabIndex = 6;
-            this.Label_Video_Depth.Text = "Depth：";
-            this.Label_Video_Depth.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Label_Video_Width.AutoSize = true;
+            this.Label_Video_Width.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Label_Video_Width.Location = new System.Drawing.Point(64, 22);
+            this.Label_Video_Width.Name = "Label_Video_Width";
+            this.Label_Video_Width.Size = new System.Drawing.Size(55, 22);
+            this.Label_Video_Width.TabIndex = 0;
+            this.Label_Video_Width.Text = "Width：";
+            this.Label_Video_Width.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ComboBox_Video_Depth
+            // ComboBox_Video_Width
             // 
-            this.ComboBox_Video_Depth.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ComboBox_Video_Depth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox_Video_Depth.FormattingEnabled = true;
-            this.ComboBox_Video_Depth.Location = new System.Drawing.Point(491, 25);
-            this.ComboBox_Video_Depth.Name = "ComboBox_Video_Depth";
-            this.ComboBox_Video_Depth.Size = new System.Drawing.Size(55, 20);
-            this.ComboBox_Video_Depth.TabIndex = 7;
+            this.TableLayoutPanel_Video.SetColumnSpan(this.ComboBox_Video_Width, 2);
+            this.ComboBox_Video_Width.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ComboBox_Video_Width.FormattingEnabled = true;
+            this.ComboBox_Video_Width.Location = new System.Drawing.Point(125, 25);
+            this.ComboBox_Video_Width.Name = "ComboBox_Video_Width";
+            this.ComboBox_Video_Width.Size = new System.Drawing.Size(116, 20);
+            this.ComboBox_Video_Width.TabIndex = 1;
             // 
             // RadioButton_Video_FullScreen
             // 
@@ -235,6 +230,38 @@
             this.RadioButton_Video_FullScreen.TabStop = true;
             this.RadioButton_Video_FullScreen.Text = "FullScreen";
             this.RadioButton_Video_FullScreen.UseVisualStyleBackColor = true;
+            // 
+            // TabPage_Maps
+            // 
+            this.TabPage_Maps.Location = new System.Drawing.Point(4, 22);
+            this.TabPage_Maps.Name = "TabPage_Maps";
+            this.TabPage_Maps.Size = new System.Drawing.Size(616, 230);
+            this.TabPage_Maps.TabIndex = 2;
+            this.TabPage_Maps.Text = "Maps";
+            this.TabPage_Maps.UseVisualStyleBackColor = true;
+            // 
+            // RadioButton_Video_Windowed
+            // 
+            this.RadioButton_Video_Windowed.AutoSize = true;
+            this.TableLayoutPanel_Video.SetColumnSpan(this.RadioButton_Video_Windowed, 2);
+            this.RadioButton_Video_Windowed.Location = new System.Drawing.Point(308, 69);
+            this.RadioButton_Video_Windowed.Name = "RadioButton_Video_Windowed";
+            this.RadioButton_Video_Windowed.Size = new System.Drawing.Size(71, 16);
+            this.RadioButton_Video_Windowed.TabIndex = 9;
+            this.RadioButton_Video_Windowed.TabStop = true;
+            this.RadioButton_Video_Windowed.Text = "Windowed";
+            this.RadioButton_Video_Windowed.UseVisualStyleBackColor = true;
+            // 
+            // Label_Video_Mode
+            // 
+            this.Label_Video_Mode.AutoSize = true;
+            this.Label_Video_Mode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Label_Video_Mode.Location = new System.Drawing.Point(64, 66);
+            this.Label_Video_Mode.Name = "Label_Video_Mode";
+            this.Label_Video_Mode.Size = new System.Drawing.Size(55, 22);
+            this.Label_Video_Mode.TabIndex = 10;
+            this.Label_Video_Mode.Text = "Mode:";
+            this.Label_Video_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CulturesGameLauncher
             // 
@@ -276,6 +303,8 @@
         private System.Windows.Forms.ComboBox ComboBox_Video_Height;
         private System.Windows.Forms.ComboBox ComboBox_Video_Depth;
         private System.Windows.Forms.RadioButton RadioButton_Video_FullScreen;
+        private System.Windows.Forms.RadioButton RadioButton_Video_Windowed;
+        private System.Windows.Forms.Label Label_Video_Mode;
     }
 }
 
